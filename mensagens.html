@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="assets/favicon-16x16.png" type="image/x-icon">
+  <link rel="stylesheet" href="mensagens.css">
+  <title>Mensagens aos Noivos</title>
+</head>
+<body>
+  <header>
+    <h1>Mensagens para os Noivos</h1>
+  </header>
+
+  <section id="messages-container">
+    <!-- As mensagens serão exibidas aqui -->
+  </section>
+
+  <script>
+    // Buscar mensagens enviadas no MockAPI
+    fetch('https://67354ff75995834c8a9269a3.mockapi.io/mensagens')
+      .then(response => response.json())
+      .then(data => {
+        const messagesContainer = document.getElementById('messages-container');
+        
+        // Exibir as mensagens
+        data.forEach(message => {
+          const messageElement = document.createElement('div');
+          messageElement.classList.add('message-item');
+          messageElement.innerHTML = `
+            <strong>Nome:</strong> ${message.nome}<br>
+            <strong>Mensagem:</strong> ${message.mensagem}<br>
+          `;
+          messagesContainer.appendChild(messageElement);
+        });
+      })
+      .catch(error => {
+        console.error('Erro ao carregar as mensagens:', error);
+      });
+  </script>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="assets/favicon-16x16.png" type="image/x-icon">
+  <link rel="stylesheet" href="convidados.css">
+  <title>Convidados Confirmados</title>
+</head>
+<body>
+  <header>
+    <h1>Convidados Confirmados</h1>
+  </header>
+
+  <section id="guests-container">
+    <!-- Os convidados confirmados serão exibidos aqui -->
+  </section>
+
+  <script>
+    // Buscar convidados confirmados no MockAPI
+    fetch('https://67354ff75995834c8a9269a3.mockapi.io/casamento')
+      .then(response => response.json())
+      .then(data => {
+        const guestsContainer = document.getElementById('guests-container');
+        
+        // Exibir os convidados confirmados
+        data.forEach(confirmation => {
+          const guestElement = document.createElement('div');
+          guestElement.classList.add('guest-item');
+          
+          // Estrutura de exibição com nome, email, confirmação de presença e convidados adicionais
+          guestElement.innerHTML = `
+            <strong>Nome:</strong> ${confirmation.nome}<br>
+            <strong>Email:</strong> ${confirmation.email}<br>
+            <strong>Confirmação de Presença:</strong> ${confirmation.confirmacao === 'sim' ? 'Confirmado' : 'Não Confirmado'}<br>
+            <strong>Convidados:</strong> ${confirmation.convidados.map(c => c.nome).join(', ')}
+          `;
+          
+          guestsContainer.appendChild(guestElement);
+        });
+      })
+      .catch(error => {
+        console.error('Erro ao carregar os convidados:', error);
+      });
+  </script>
+</body>
+</html>

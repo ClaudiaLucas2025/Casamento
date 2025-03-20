@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="assets/favicon-16x16.png" type="image/x-icon">
+  <link href="https://fonts.googleapis.com/css2?family=Sacramento&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+	<link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="style.css">
+  <title>Casamento Claudia &amp; Lucas</title>
+</head>
+<body>
+  <header class="header-container">
+    <section class="navigation" data-aos="fade-right">
+      <div class="logo">C&amp;L</div>
+      <ul>
+        <li><a href="#couple">NOIVOS</a></li>
+        <li><a href="#event">EVENTO</a></li>
+        <li><a href="#gift-list">LISTA DE PRESENTES</a></li>
+        <li><a href="#presence">CONFIRME SUA PRESENCA</a></li>
+        <li><a href="#carousel">FOTOS DO CASAL</a></li>
+        <li><a href="#message">DEIXE UMA MENSAGEM</a></li>
+      </ul>
+    </section>
+    <section class="countdown" data-aos="fade-right">
+      <h1>Claudia &amp; Lucas</h1>
+      <h2>Vamos nos casar em:</h2>
+      <div class="countdown-content">
+        <section class="days">
+          <span class="value">00</span>
+          <span class="label">Dias</span>
+        </section>
+        <section class="hours">
+          <span class="value">00</span>
+          <span class="label">Horas</span>
+        </section>
+        <section class="minutes">
+          <span class="value">00</span>
+          <span class="label">Minutos</span>
+        </section>
+        <section class="seconds">
+          <span class="value">00</span>
+          <span class="label">Segundos</span>
+        </section>
+      </div>
+    </section>
+  </header>
+  <section class="couple" id="couple">
+    <h2 data-aos="fade-right">Noivos</h2>
+    <div class="couple-content" data-aos="fade-right">
+      <section class="man">
+        <div class="man-content">
+          <h3>Noiva pelo noivo</h3>
+          <p>
+            Ele é incrível! Tímido, e calado mas de opinião forte! 
+            Tem uma maneira muito particular de demonstrar afeto, 
+            geralmente com beijinhos tímidos e abraços apertados.
+          </p>
+        </div>
+        <img class="img-man" src="assets/noivo.jpeg" alt="">
+      </section>
+      <div class="heart-container">
+        <img class="heart" src="assets/heart.png" alt="">
+      </div>
+      <section class="woman">
+        <img class="img-woman" src="assets/noiva.jpeg" alt="">
+        <div class="woman-content">
+          <h3>Noivo pela noiva</h3>
+          <p>
+            Companheira para todos os momentos, ela é muito carinhosa 
+            e atenciosa. Uma mulher forte, mas que não deixa de lado 
+            a garotinha cheia de sonhos.
+          </p>
+        </div>
+      </section>
+    </div>
+  </section>
+  <section class="event-container" id="event">
+    <h2 data-aos="fade-right">Evento</h2>
+    <div class="event-content" data-aos="fade-right">
+      <h3>O Casamento</h3>
+      <div class="event-time">
+        <div class="column">
+          <img src="assets/clock.png" alt="">
+          <span>16:30</span>
+        </div>
+        <div class="column">
+          <img src="assets/calendar.png" alt="">
+          <span>14/06/2025</span>
+        </div>
+      </div>
+      <p>A Cerimônia será no local:</p>
+      <p>Paróquia Santa Teresinha</p>
+      <p>Rua Doutor Rubens Rebouças de Carvalho, 200 <br> Portal D'Oeste 1, Osasco - SP</p>
+      <p>Esperamos vocês para celebrar nossa união!</p>
+      <div class="line"></div>
+      <p>A Recepção será no local:</p>
+      <p>Espaço Dimonick</p>
+      <p>Rua Dr Edgar Magalhães Gouveia, 11 <br> Portal D'Oeste, Osasco - SP</p>
+      <p>Esperamos vocês para celebrar nossa união!</p>
+    </div>
+  </section>
+  <section class="gift-list" id="gift-list">
+    <h2 data-aos="fade-right">Lista de Presentes</h2>
+    <iframe 
+      src="https://sites.icasei.com.br/claudialucas/pages/34199997" 
+      class="gift-frame"
+      data-aos="fade-right"
+    ></iframe>
+  </section>
+  <section class="presence" id="presence">
+    <h2 data-aos="fade-right">Você confirma sua presença ?</h2>
+    <form class="form-confirmacao" id="form-confirmacao" data-aos="fade-right">
+      <label for="nome">Nome:</label>
+      <input type="text" id="nome" name="nome" placeholder="Nome Completo" required />
+      <label for="email">E-mail:</label>
+      <input type="email" id="email" name="email" placeholder="exemplo@email.com" required />
+      <label for="confirmacao">Confirmação de Presença:</label>
+      <select id="confirmacao" name="confirmacao" required>
+        <option value="" disabled selected>Selecione...</option>
+        <option value="sim">Confirmo minha presença</option>
+        <option value="nao">Não poderei comparecer</option>
+      </select>
+      <label for="convidados">Acompanhantes:</label>
+      <input type="text" id="convidados" name="convidados" placeholder="Nome dos Acompanhantes" required />
+      <button type="submit">Enviar</button>
+    </form>
+  </section>
+  <section class="carousel" id="carousel">
+    <h2 data-aos="fade-right">Fotos do casal</h2>
+    <div class="swiper" data-aos="fade-right">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide"><img src="assets/couple1.jpeg" alt=""></div>
+        <div class="swiper-slide"><img src="assets/couple2.jpg" alt=""></div>
+        <div class="swiper-slide"><img src="assets/couple5.jpg" alt=""></div>
+        <div class="swiper-slide"><img src="assets/couple6.jpg" alt=""></div>
+        <div class="swiper-slide"><img src="assets/couple7.jpeg" alt=""></div>
+        <div class="swiper-slide"><img src="assets/couple8.jpeg" alt=""></div>
+        <div class="swiper-slide"><img src="assets/couple9.jpeg" alt=""></div>
+        <div class="swiper-slide"><img src="assets/couple12.jpg" alt=""></div>
+      </div>
+      <div class="swiper-pagination"></div>
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-button-next"></div>
+    </div>    
+  </section>
+  <section class="message" id="message">
+    <h2 data-aos="fade-right">Deixe uma mensagem para os noivos</h2>
+    <form class="message-content" id="message-content" data-aos="fade-right">
+      <input type="text" id="message-name" name="nome" placeholder="Nome Completo" required />
+      <textarea id="mensagem" name="mensagem" cols="30" rows="10" placeholder="Mensagem"></textarea>
+      <button type="submit">Enviar Mensagem</button>
+    </form>
+  </section>
+  <section class="arrow">
+    <img class="arrow-img" src="assets/arrow.png" alt="">
+  </section>
+  <section class="notification" id="notification">
+    <p id="notification-message">Presença confirmada com sucesso!</p>
+  </section> 
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
